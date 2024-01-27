@@ -31,11 +31,13 @@ remote: Compressing objects: 100% (32/32), done.
 remote: Total 36 (delta 5), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (36/36), 22.17 KiB | 360.00 KiB/s, done.
 Resolving deltas: 100% (5/5), done.
+
 root@debian:~/k8s/Nexus-Repository# ls
 nexus-deployment.yaml  nexus-namespace.yaml  nexus-pvc.yaml  nexus-service.yaml  README.md  setup.sh
+```
+
+```bash
 root@debian:~/k8s/Nexus-Repository# chmod +x setup.sh
-root@debian:~/k8s/Nexus-Repository# ./setup-nexus.sh
--bash: ./setup-nexus.sh: No such file or directory
 root@debian:~/k8s/Nexus-Repository# ./setup.sh
 Namespace oluşturuluyor...
 namespace/nexus created
@@ -53,12 +55,11 @@ NAME            TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          
 nexus-service   LoadBalancer   10.43.129.196   192.168.1.115   8081:30272/TCP   6s
 
 ```
-Sonra scriptimizi çalıştırıyoruz
+
+Panel parolasını öğrenmek için ./get-password.sh çalıştırmanız yeterli
 
 ```bash
-Panel parolası için ./get-password.sh çalıştırmanız yeterli
-```
-```bash
+root@debian:~/k8s/Nexus-Repository# chmod +x get-password.sh
 root@debian:~/k8s/Nexus-Repository# ./get-password.sh
 Nexus pod ismi bulundu: nexus-b5cc7cb57-jrbb6
 Nexus admin şifresini alınıyor...
