@@ -41,6 +41,8 @@ sleep 5
 echo "Service durumu kontrol ediliyor..."
 kubectl get svc -n nexus
 
+sleep 30
+
 # Nexus pod ismini al ve admin şifresini göster
 NAMESPACE=nexus
 NEXUS_POD_NAME=$(kubectl get pod -n $NAMESPACE -l app=nexus -o jsonpath="{.items[0].metadata.name}")
@@ -49,6 +51,7 @@ if [ ! -z "$NEXUS_POD_NAME" ]; then
     echo "Nexus pod ismi bulundu: $NEXUS_POD_NAME"
     echo "Nexus admin şifresi:"
     kubectl exec $NEXUS_POD_NAME -n $NAMESPACE -- cat /nexus-data/admin.password
+    echo
 else
     echo "Nexus pod bulunamadı. Lütfen pod'ların durumunu kontrol edin."
 fi
