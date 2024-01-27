@@ -1,3 +1,7 @@
+# Nexus-Repository
+
+### Kurulumdan önce küçük bir not 8 GB RAM 4 CPU olmazsa hata alabiliyorsunuz.
+
 Nexus Repository Kurulumu
 ilk önce repoyu indiriyoruz ve dizine giriyoruz
 
