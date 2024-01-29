@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p ~/k8s/Nexus-Repository/data/
 
 # Namespace, PVC, Deployment ve Service dosyalarının yollarını tanımla
 NAMESPACE_YAML="nexus-namespace.yaml"
