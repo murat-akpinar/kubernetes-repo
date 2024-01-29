@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#!/bin/bash
+
 mkdir -p /mnt/data/nexus
 chmod 755 -R /mnt/
 
