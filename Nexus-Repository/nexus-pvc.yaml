@@ -10,6 +10,10 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/mnt/data/nexus"
+    persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    name: nexus-pvc
+    namespace: nexus
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -22,3 +26,4 @@ spec:
   resources:
     requests:
       storage: 8Gi
+      volumeName: nexus-pv
