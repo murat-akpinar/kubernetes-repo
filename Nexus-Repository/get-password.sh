@@ -11,6 +11,7 @@ if [ ! -z "$NEXUS_POD_NAME" ]; then
     echo "Nexus pod ismi bulundu: $NEXUS_POD_NAME"
     echo "Nexus admin şifresini alınıyor..."
     kubectl exec $NEXUS_POD_NAME -n $NAMESPACE -- cat /nexus-data/admin.password
+    echo
 else
     echo "Nexus pod bulunamadı. Lütfen pod'ların durumunu kontrol edin."
 fi
