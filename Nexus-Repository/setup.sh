@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-mkdir -p /mnt/data/nexus
-chmod 755 -R /mnt/
+sudo mkdir -p /mnt/data/nexus
+sudo chmod 755 -R /mnt/
 
 # Namespace, PVC, Deployment ve Service dosyalarının yollarını tanımla
 NAMESPACE_YAML="nexus-namespace.yaml"
