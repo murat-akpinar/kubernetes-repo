@@ -14,7 +14,7 @@ spec:
         app: nexus
     spec:
       securityContext:
-        fsGroup: 0  # Nexus'un dosyalara yazabilmesi için gerekli olan grup kimliği
+        fsGroup: 1000  # Nexus'un dosyalara yazabilmesi için gerekli olan grup kimliği
       containers:
       - name: nexus
         image: sonatype/nexus3:latest
@@ -24,7 +24,7 @@ spec:
         - name: nexus-data
           mountPath: /nexus-data
         securityContext:
-          runAsUser: 0  # Nexus container'ının çalışacağı kullanıcı kimliği
+          runAsUser: 1000  # Nexus container'ının çalışacağı kullanıcı kimliği
       volumes:
       - name: nexus-data
         persistentVolumeClaim:
