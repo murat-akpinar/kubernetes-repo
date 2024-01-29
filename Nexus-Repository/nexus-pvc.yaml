@@ -9,7 +9,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "~/k8s/Nexus-Repository/data/"
+    path: "/mnt/data/nexus"
   persistentVolumeReclaimPolicy: Retain
   claimRef:
     name: nexus-pvc
