@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -sfL https://get.k3s.io | sh -
+curl -sfL https://get.k3s.io  | INSTALL_K3S_EXEC="--disable=traefik" sh -
 mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown $(whoami):$(whoami) ~/.kube/config
