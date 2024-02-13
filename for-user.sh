@@ -29,3 +29,6 @@ if ! grep -q "export KUBECONFIG=$USER_HOME/.kube/config" $USER_HOME/.bashrc; the
 fi
 
 echo "$TARGET_USER kullanıcısı için k3s yapılandırması tamamlandı."
+
+
+source ~/.bashrc
