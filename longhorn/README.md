@@ -39,6 +39,10 @@ Longhorn, Kubernetes için gelişmiş bir depolama çözümüdür.
     ```
 
 ## MetalLB ile Longhorn UI'ya Erişim Sağlama
+```bash
+kubectl patch svc longhorn-frontend -n longhorn-system -p '{"spec": {"type": "LoadBalancer"}}'
+```
+
 
 Eğer MetalLB zaten kuruluysa ve bir `ConfigMap` ile yapılandırılmışsa, Longhorn UI'ya erişim için bir `LoadBalancer` türünde Kubernetes servisi oluşturabilirsiniz:
 
